@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        table,th,td{
+            border: 1px solid black;
+          border-collapse: collapse;
+          padding:10px 20px; 
+        }
+    </style>
+</head>
+<body>
+   <script>
+    var con=document.createElement('div');
+    con.className="container";
+    con.style.width="100vw";
+    con.style.height="100vh";
+    con.style.backgroundColor="black";
+    
+    var car=document.createElement('div');
+    car.className="card";
+    car.style.width="700px";
+    car.style.height="100vh";
+    car.style.backgroundColor="white";
+    car.style.padding="50px";
+    con.style.display="flex";
+    con.style.justifyContent="center";
+    var nam=document.createElement('div');
+    nam.className="name";
+    var h4=document.createElement('span');
+    h4.innerHTML="PALYAM REKHA";
+    h4.style.fontSize="20px";
+    h4.style.fontWeight="bold";
+
+    var mail=document.createElement('span');
+    mail.innerHTML="<b>Email:</b>palyamrekha3@gmail.com";
+    nam.appendChild(h4);
+    nam.appendChild(mail);
+    nam.style.display="flex";
+    nam.style.justifyContent="space-between";
+    car.appendChild(nam);
+
+    var head=document.createElement('div');
+    var h3=document.createElement('h3');
+    h3.innerHTML="Career Objective:";
+    h3.style.backgroundColor="#dbd5d5";
+    head.appendChild(h3);
+    var career=document.createElement('p');
+    career.innerHTML="To work in a highly competitive environment with a perfect challenge by contributing the best for the growth of the Organization while ensuring growth in personal career.";
+    head.appendChild(career);
+    car.appendChild(head);
+
+    var tabh=document.createElement('div');
+    var h1=document.createElement('h3');
+    h1.innerHTML="Academics:";
+    h1.style.backgroundColor="#dbd5d5";
+    tabh.appendChild(h1);
+    car.appendChild(tabh);
+    var tab=document.createElement('div');
+    
+   // var tbod=document.createElement('tbody');
+
+    const data=[{"Course":"MCA",
+"Institution":"Sri padmavati mahila visvavidyalayam, Tirupati",
+"Duration":"2022-2024",
+"Percentage":84},
+{"Course":"DEGREE(BSC)",
+"Institution":"SV degree college, Anantapur",
+"Duration":"2019-2022",
+"Percentage":8.71},
+{"Course":"INTERMEDIATE(MPC)",
+"Institution":"SKGM Junior College,Bathalapalli",
+"Duration":"2017-2019",
+"Percentage":9.61},
+{"Course":"SSC",
+"Institution":"Sri vijetha High School,Bathalapalli",
+"Duration":"2016-2017",
+"Percentage":8.5}
+]
+
+var table = "<table><thead><tr><th>Course</th><th>Institution</th><th>Duration</th><th>Percentage</th></tr></thead><tbody>";
+            for (var i = 0; i < data.length; i++) {
+                table += "<tr><td>" + data[i].Course + "</td><td>" + data[i].Institution + "</td><td>" + data[i].Duration + "</td><td>" + data[i].Percentage + "</td></tr>";
+
+            }
+            table += "</tbody></table>";
+            tab.innerHTML = table;
+    
+   
+      
+    car.appendChild(tab);
+
+    var skills=document.createElement('div');
+    var h5=document.createElement('h3');
+    h5.innerHTML="Skills:";
+    h5.style.backgroundColor="#dbd5d5";
+    skills.appendChild(h5)
+    var li1=document.createElement('li');
+    li1.innerHTML="<b>Programming Languages:</b><span> C, C++</span>";
+    li1.style.paddingBottom="10px";
+    skills.appendChild(li1);
+    var li2=document.createElement('li');
+    li2.innerHTML="<b>Frontend Technologies: </b>Html, CSS, Bootstrap,Javascript(javascript rumtime envinorment=>web APIS,mirotask queue,callback or task queue,event loop.(Javascript engine=>call stack,memory stack,heap memory,JIT compiler)";
+    li2.style.paddingBottom="10px";
+    skills.appendChild(li2);
+    var li3=document.createElement('li');
+    li3.innerHTML="<b>Databases: </b>MySql";
+    li3.style.paddingBottom="10px";
+    skills.appendChild(li3);
+    car.appendChild(skills);
+   
+    var declar=document.createElement('div');
+    var h6=document.createElement('h3');
+    h6.innerHTML="Declaration:";
+    h6.style.backgroundColor="#dbd5d5";
+    declar.appendChild(h6);
+    var para=document.createElement('p');
+    para.innerHTML="I here by declaring that all the details furnished by me is correct to the best of my knowledge and belief.";
+    declar.appendChild(para);
+    car.appendChild(declar);
+
+    var footer=document.createElement('div');
+    var span1=document.createElement('span');
+    span1.innerHTML="Place:Anantapur";
+    footer.appendChild(span1);
+    var span2=document.createElement('span');
+    span2.innerHTML="(P.Rekha)";
+    footer.appendChild(span2);
+    footer.style.display="flex";
+    footer.style.justifyContent="space-between";
+    car.appendChild(footer);
+
+
+    
+    con.appendChild(car);
+    document.body.appendChild(con);
+    console.log(con);
+   </script> 
+</body>
